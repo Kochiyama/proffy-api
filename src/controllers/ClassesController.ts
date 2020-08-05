@@ -36,8 +36,6 @@ export default class ClassesController {
       .where('classes.subject', '=', subject)
       .join('users', 'classes.user_id', '=', 'users.id')
       .select(['classes.*', 'users.*']);
-    
-    console.log(classes)
 
     return res.json(classes);
 
@@ -86,7 +84,9 @@ export default class ClassesController {
       await trx('class_schedule').insert(classSchedule);
     
       await trx.commit();
-    
+      
+      console.log("New Teacher has subscribed");
+
       return res.status(201).send();
   
     } catch(err) {
