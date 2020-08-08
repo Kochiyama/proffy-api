@@ -6,6 +6,8 @@ const routes = express.Router();
 const classesController = new ClassesController();
 const connectionsController = new ConnectionsController();
 
+routes.get('/classes/:page', classesController.showAll);
+
 routes.post('/classes', classesController.create);
 routes.get('/classes', classesController.index);
 

@@ -9,6 +9,21 @@ interface ScheduleItem {
 }
 
 export default class ClassesController {
+  async showAll(req: Request, res: Response) {
+
+    const itensPerPage = 10;
+
+    const offset = (itensPerPage * Number(req.params.page));
+
+    const response = await db('classes')
+      .limit(itensPerPage)
+      .offset(offset)
+      .join('users', 'classes.user_id', '=', 'users.id')
+      .select(['classes.*', 'users.*']);
+
+    return res.json(response);
+  }
+
   async index(req: Request, res: Response) {
     const filters = req.query;
 
