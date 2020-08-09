@@ -2,7 +2,7 @@
   Proffy API
 </h1>
 
-Full stack Project with cross plataform mobile, web and API. A plataform that connects inependent teachers and students.
+Full stack project with mobile, web and API. A plataform that connects inependent teachers and students.
 Project initially developed at **Next Level Week #2** from @Rocketseat.
  
 ### The complete project is constituted by these three repositories:
@@ -11,23 +11,22 @@ Project initially developed at **Next Level Week #2** from @Rocketseat.
 - [Mobile](https://github.com/Kochiyama/proffy-mobile) 
 - [Api](https://github.com/Kochiyama/proffy-api)
 
-### Current Porject State: :hammer_and_wrench: Working on it :hammer_and_wrench: 
+### Current Project State: :hammer_and_wrench: Working :hammer_and_wrench: 
 ---
-## Features roadmap
+## Features list (also todo-list)
 
-- [x] Recieve teacher data and Register the new teacher on database
-- [x] Return Teacher classes
-- [x] Return Classes
-- [x] Store Total Connections (how many students used the 'whatsapp button' to contact a teacher)
-- [x] Return the total number of connections
-- [ ] Return All teacher classes using pagination
-- [ ] Store student and teacher data
-- [ ] Update student and teacher data
-- [ ] Authentication for all users
-- [ ] Store the favorites on database
+- [x] **Recieve** teacher data and **register** the new teacher on **database**
+- [x] **Return** filtered teacher classes
+- [x] **Store** total Connections (how many students used the 'whatsapp button' to contact a teacher)
+- [x] **Return** the total number of connections
+- [ ] **Return** all teacher classes using pagination
+- [ ] **Store** student and teacher data
+- [ ] **Update** student and teacher data
+- [ ] **Add** authentication for all users
+- [ ] **Store** the favorites on database
 
 ---
-## Preview: Web application consuming this API
+## Preview: web application consuming this API
 
 <img src="readme-assets/preview.gif" />
 
@@ -41,9 +40,7 @@ Before try :microscope: proffy-api from your own local network you must have ins
 - [yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
 - [git](https://git-scm.com/downloads)
 
-## Test dependencies
-The versions can vary, if they vary too much and some bug occur, unninstall the current version and install the exact version of output bellow. 
-
+## Test the dependencies
 Into your terminal run:  
 
 ### Node
@@ -70,14 +67,16 @@ git --version
 Output expected:  
 `git version 2.25.1`
 
+The versions can vary, if they vary too much and some bug occur, unninstall the current version and install the exact version of outputs above. 
+
 ## Set up the API
 
-Clone this repository, Into your terminal At your projects folder run: 
+Clone this repository, into your terminal run: 
 ```
 git clone https://github.com/Kochiyama/proffy-api
 ```
 
-Then change directory to the proffy-api folder, run: 
+Then change the actual directory to the proffy-api folder, run: 
 ```
 cd proffy-api
 ```
@@ -91,7 +90,7 @@ Set up the Database
 ```
 yarn knex:migrate
 ```  
-it will create the database.sqlite file with all the needed tables
+It will create the `database.sqlite` file with all the needed tables
 
 And finally: 
 ```
@@ -113,7 +112,7 @@ Follow the respective tutorial (it depends on your OS):
 - [mac](https://opensource.com/article/18/5/how-find-ip-address-linux)
 
 ---
-## End Points
+## End Points (used by the front ends)
 
 GET `/connections`  
 Show the total connections on your network
@@ -127,15 +126,24 @@ filter and show classes (require filter)
 Post `/classes`  
 Register a teacher/class
 
+---
 
 # All right for the launch :rocket:
 
-To test the api in the best way visit the [web]() and/or [mobile]() repositories and follow the instructions to set up your front-end to consume your fresh started api.
+To test the api in the best way, visit the [web](https://github.com/Kochiyama/proffy-web) and/or [mobile](https://github.com/Kochiyama/proffy-mobile) repositories and follow the instructions to set up your front-end to consume your fresh started api.
+
+---
 
 ## Address to consume the api
-`'https://[yourLocalIp]/'`
+`'http://[yourLocalIp]:3333/'`  
 
-:warning: replace '[yourLocalIp]' by your real local ip.
+:warning: replace '[yourLocalIp]' by your real local ip.  
+
+example:
+
+`http://192.168.0.100:3333/`
+
+---
 
 ## :black_nib: Feedback
 If you found a bug or error feel free to create a **new issue** on this repository  
