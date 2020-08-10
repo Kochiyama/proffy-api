@@ -22,7 +22,7 @@ Project initially developed at **Next Level Week #2** from @Rocketseat.
 - [ ] **Return** all teacher classes using pagination
 - [ ] **Store** student and teacher data
 - [ ] **Update** student and teacher data
-- [ ] **Add** authentication for all users
+- [x] **Add** authentication for all users
 - [ ] **Store** the favorites on database
 
 ---
